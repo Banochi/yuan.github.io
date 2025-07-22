@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Kendrick</title>
+  <link rel="stylesheet" href="Mystyless.css">
+  <style>
+    /* Form styling */
+    form {
+      background: #fff;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .success {
+      color: green;
+      text-align: center;
+    }
+
+    /* Navigation styling */
+    nav a {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: background-color 0.3s ease;
+      margin: 0 5px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Register button styling */
+    .register-btn {
+      background-color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .register-btn:hover {
+      background-color: #f0f0f0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="headline">Contact Me</h1>
+    <nav>
+      <a href="Mywebsite.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Projects.html">Projects</a>
+    </nav>
+    <button class="register-btn" onclick="startRegistration()">Register</button>
+  </header>
+
+  <main>
+    <form id="contactForm" style="display:none;">
+      <input type="text" name="name" id="name" placeholder="Your name" required>
+      <input type="email" name="email" id="email" placeholder="Your email" required>
+      <textarea name="message" id="message" rows="4" placeholder="Your message..." required></textarea>
+      <button type="submit">Submit</button>
+      <p class="success" id="response"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Kendrick Francisco</p>
+  </footer>
+
+  <!-- Your custom JS -->
+  <script src="Mywebsite.js"></script>
+
+  <!-- Google Apps Script submission -->
+  <script>
+    const scriptURL = "https://script.google.com/macros/s/AKfycbxwxKtlt1b5EKvgJCE9XFRmBlr1mZNo1x2WAjYaArX09oa4Y19lj6d9hM6j0i2OvM9m/exec";
+    const form = document.getElementById("contactForm");
+    const responseMsg = document.getElementById("response");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch(scriptURL, {
+        method: "POST",
+        body: formData
+      })
+      .then(response => {
+        responseMsg.textContent = "Message sent successfully!";
+        form.reset();
+      })
+      .catch(error => {
+        responseMsg.textContent = "Error sending message.";
+        console.error("Error!", error.message);
+      });
+    });
+
+    // This is the function triggered by Register button
+    function startRegistration() {
+      document.getElementById("contactForm").style.display = "block";
+      window.scrollTo({ top: document.getElementById("contactForm").offsetTop - 20, behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>

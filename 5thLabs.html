@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - 17 SDGs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>United Nations - 17 SDGs</h1>
+        <form id="signupForm">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday" required onchange="validateAge()">
+            <p id="ageMessage"></p>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select your gender</option>
+                <option value="Agender">Agender</option>
+                <option value="Androgyne">Androgyne</option>
+                <option value="Androgynous">Androgynous</option>
+                <option value="Bigender">Bigender</option>
+                <option value="Cisgender">Cisgender</option>
+                <option value="Cisgender Female">Cisgender Female</option>
+                <option value="Cisgender Male">Cisgender Male</option>
+                <option value="Gender Fluid">Gender Fluid</option>
+                <option value="Gender Nonconforming">Gender Nonconforming</option>
+                <option value="Gender Questioning">Gender Questioning</option>
+                <option value="Gender Variant">Gender Variant</option>
+                <option value="Genderqueer">Genderqueer</option>
+                <option value="Intersex">Intersex</option>
+                <option value="Male to Female">Male to Female</option>
+                <option value="Female to Male">Female to Male</option>
+                <option value="Neither">Neither</option>
+                <option value="Neutrois">Neutrois</option>
+                <option value="Non-binary">Non-binary</option>
+                <option value="Other">Other</option>
+                <option value="Pangender">Pangender</option>
+                <option value="Trans">Trans</option>
+                <option value="Trans Female">Trans Female</option>
+                <option value="Trans Male">Trans Male</option>
+                <option value="Trans Man">Trans Man</option>
+                <option value="Trans Person">Trans Person</option>
+                <option value="Trans Woman">Trans Woman</option>
+                <option value="Transfeminine">Transfeminine</option>
+                <option value="Transgender">Transgender</option>
+                <option value="Transgender Female">Transgender Female</option>
+                <option value="Transgender Male">Transgender Male</option>
+                <option value="Transgender Man">Transgender Man</option>
+                <option value="Transgender Person">Transgender Person</option>
+                <option value="Transgender Woman">Transgender Woman</option>
+                <option value="Transmasculine">Transmasculine</option>
+                <option value="Two-Spirit">Two-Spirit</option>
+                <option value="Butch">Butch</option>
+                <option value="Demiboy">Demiboy</option>
+                <option value="Demigirl">Demigirl</option>
+                <option value="Gender Apathetic">Gender Apathetic</option>
+                <option value="Genderfluid">Genderfluid</option>
+                <option value="Intergender">Intergender</option>
+                <option value="Maverique">Maverique</option>
+                <option value="Nanogender">Nanogender</option>
+                <option value="Polygender">Polygender</option>
+                <option value="Third Gender">Third Gender</option>
+                <option value="Tragender">Tragender</option>
+            </select>
+
+            <label>Which of the 17 Sustainable Development Goals interest you?</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="sdg1" name="sdg" value="No Poverty"><label for="sdg1">No Poverty</label>
+                <input type="checkbox" id="sdg2" name="sdg" value="Zero Hunger"><label for="sdg2">Zero Hunger</label>
+                <input type="checkbox" id="sdg3" name="sdg" value="Good Health and Well-being"><label for="sdg3">Good Health and Well-being</label>
+                <input type="checkbox" id="sdg4" name="sdg" value="Quality Education"><label for="sdg4">Quality Education</label>
+                <input type="checkbox" id="sdg5" name="sdg" value="Gender Equality"><label for="sdg5">Gender Equality</label>
+                <input type="checkbox" id="sdg6" name="sdg" value="Clean Water and Sanitation"><label for="sdg6">Clean Water and Sanitation</label>
+                <input type="checkbox" id="sdg7" name="sdg" value="Affordable and Clean Energy"><label for="sdg7">Affordable and Clean Energy</label>
+                <input type="checkbox" id="sdg8" name="sdg" value="Decent Work and Economic Growth"><label for="sdg8">Decent Work and Economic Growth</label>
+                <input type="checkbox" id="sdg9" name="sdg" value="Industry, Innovation and Infrastructure"><label for="sdg9">Industry, Innovation and Infrastructure</label>
+                <input type="checkbox" id="sdg10" name="sdg" value="Reduced Inequalities"><label for="sdg10">Reduced Inequalities</label>
+                <input type="checkbox" id="sdg11" name="sdg" value="Sustainable Cities and Communities"><label for="sdg11">Sustainable Cities and Communities</label>
+                <input type="checkbox" id="sdg12" name="sdg" value="Responsible Consumption and Production"><label for="sdg12">Responsible Consumption and Production</label>
+                <input type="checkbox" id="sdg13" name="sdg" value="Climate Action"><label for="sdg13">Climate Action</label>
+                <input type="checkbox" id="sdg14" name="sdg" value="Life Below Water"><label for="sdg14">Life Below Water</label>
+                <input type="checkbox" id="sdg15" name="sdg" value="Life on Land"><label for="sdg15">Life on Land</label>
+                <input type="checkbox" id="sdg16" name="sdg" value="Peace, Justice and Strong Institutions"><label for="sdg16">Peace, Justice and Strong Institutions</label>
+                <input type="checkbox" id="sdg17" name="sdg" value="Partnerships for the Goals"><label for="sdg17">Partnerships for the Goals</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
